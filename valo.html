@@ -14,12 +14,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>     <!--ナビゲーションバーの動作に必要なJS-->
      <style>
         body {
-             font-family: "Verdana", sans-serif;
+            font-family: "Noto Sans JP",sans-serif;
              color: #080808;
              background-color: #f9f8f8;
              line-height: 2.0;     /*行間の調整*/
              font-size: 16px;
-             font-weight: 500;   /*文字の太さ*/
+             font-weight: 300;   /*文字の太さ*/
          }
          .starter-template {
              padding: 40px 10px;
@@ -31,18 +31,80 @@
              color: #444343;
          }
          img {
-             max-width: 100%;
+             max-width: 80%;
              height: auto;      /*画像の縦横比を維持*/
             display: block;      /*画像をブロック要素として表示*/
              margin: 20px auto; 
+         }
+         h1{
+            margin-top: 20px;
          }
         h2 {
              margin-top: 40px;
              margin-bottom: 20px;
              font-weight: bold;
-             font-size: 24px;
-             border-bottom: 4px solid #f01919;  /*下線の追加*/
+             font-size: 22px;
+             border: 3px solid #f01919;  /*下線の追加*/
+             background-color: #3d3c3c;
+             color:#f9f8f8;
+             padding: 15px;
+         }  
+         h3 {
+             margin-top: 30px;
+             margin-bottom: 20px;
+             font-weight: bold;
+             font-size: 20px;
+             border-bottom: 2px solid #f01919;  
          }
+         h4{
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 30px;
+            padding-left: 4px;
+            border-left: 2px solid #f01919;
+         }
+         .red-text{
+            color: red;
+         }
+         .score-table{
+            width: 100%;
+            border-collapse: collapse;      /*枠線を一本にまとめる*/
+            margin: 20px 0;
+            font-size: 16px;
+         }
+         .score-table th{
+            border: 1px solid #999;     /*枠線を付ける*/
+            padding: 0px 12px;
+            text-align: center;
+            background-color: #eee;
+         }
+         .score-table td{
+             border: 1px solid #999;     /*枠線を付ける*/
+            padding: 10px 12px;
+            text-align: left;
+            line-height: 1.8;
+         }
+         .valo-list{
+            list-style: none;   /*もともとの点を消す*/           
+         }
+         .valo-list li{
+            position: relative;
+            padding-left: 20px;     /*文字が重ならないようにずらす*/
+            margin-bottom: 8px;
+         }
+         .valo-list li::before{
+            content: "";        /*点の中を空白にする*/
+            position: absolute;     /*点の位置を調整*/
+            left: 1px;
+            top: 0.65em;
+            width: 8px;
+            height: 8px;
+            background-color: #f01919;
+            border: 2px solid #000;
+            transform: rotate(45deg);     /*45度回転*/
+            box-sizing: border-box;     /*枠線も含めてサイズ調整*/
+        }
+         
          
      </style>
 </head>
@@ -84,25 +146,69 @@
                 初心者にもわかりやすく解説します。これからVALORANTを始める人も、基本をおさらいしたい人も、ぜひ参考にしてみてください！</p>
 
             <h2>VALORANTとは</h2>
-            <img src="image\images (1).jpg" alt="VALORANTとは">
+            <img src="image\Ep8A1_Riot-Games.com-Product-Card-1920x1080_.webp" alt="VALORANTとは">
             <p>VALORANT（ヴァロラント）は、Riot Gamesが開発・運営している、基本プレイ無料の5対5のタクティカルFPSゲーム。PC版を中心に展開されており、プレイヤーは「エージェント」と呼ばれるキャラクターを操作して、相手チームとの対戦を行う。
-               <br><br> VALORANTの大きな特徴は、<strong>銃の撃ち合いだけでなく、エージェントごとの特殊能力やチームでの連携が重要</strong>になることである。例えば、煙幕を出して敵からの視線を遮ったり、壁を作って敵の進行を妨害したり、味方を回復したりする能力があります。エージェントによって使える能力が異なるため、それぞれの特徴を理解して戦うことが大切となる。
-                <br>VALORANTをプレイすることで重要となるのは、<strong>エイム力、戦略、判断力、チームワーク</strong>の4つ。初心者でも、武器の扱いやエージェントの能力、基本的なルールを少しずつ覚えることで、ゲームを楽しめるようになる。</p>
+               <br><br> VALORANTの大きな特徴は、<span class="red-text">銃の撃ち合いだけでなく、エージェントごとの特殊能力やチームでの連携が重要</span>になることである。例えば、煙幕を出して敵からの視線を遮ったり、壁を作って敵の進行を妨害したり、味方を回復したりする能力があります。エージェントによって使える能力が異なるため、それぞれの特徴を理解して戦うことが大切となる。
+                <br>VALORANTをプレイすることで重要となるのは、<span class="red-text">エイム力、戦略、判断力、チームワーク</span>の4つ。初心者でも、武器の扱いやエージェントの能力、基本的なルールを少しずつ覚えることで、ゲームを楽しめるようになる。</p>
             
             <h2>VALORANTの基本ルール</h2>
-             <img src="image\images.jpg" alt="VALORANTの基本ルール">
+             <img src="image\ebecd243d20b3c6937390700997a921a.webp" alt="VALORANTの基本ルール">
             <p>VALORANTの基本ルールは以下の通り</p>
-            <ul>
+            <ul class="valo-list">
                 <li>5対5のチーム戦</li>
                 <li>ラウンド制</li>
-                <li>攻撃側の勝利条件</li>
-                <li>防衛側の勝利条件</li>
+                <li>13ラウンド先取で勝利</li>
+                <li>攻撃側は爆弾爆破or敵全滅で勝利</li>
+                    
             </ul>
 
             <h3>5対5のチーム戦</h3>
             <p>VALORANTは、5人対5人のチーム戦。各チームは攻撃側と防衛側に分かれ、ラウンドごとに役割が入れ替わる。</p>
+
+            <h3>ラウンド制</h3>
+            <p>基本的に13ラウンド先取。<br>12ラウンド終了すると攻撃側と防衛側が入れ替わり、両方の陣営で戦うことになる。</p>
+            <h4>12対12でオーバータイムに突入</h4>
+            <p>コンペティティブでは、両チームが12ラウンドずつ獲得すると、オーバータイム(OT)と呼ばれる延長戦になる。
+                延長戦では攻撃と防衛を交互にプレイし、2ラウンド連取したチームが勝利となる。<span class="red-text">ラウンド連取するまでオーバータイムが続くが、2ラウンドごとに引き分け投票が行われる。</span></p>
+
+                <!--表を用いた引き分け説明-->
+            <h4>引き分けに必要な投票数</h4>
+            <table class="score-table">
+                <tr>
+                    <th>回数</th>       
+                    <th>必要投票数</th>
+                </tr>
+                <tr>
+                    <td>1回目(26ラウンド目)</td>
+                    <td>6人</td>
+                </tr>
+                <tr>
+                    <td>2回目(28ラウンド目)</td>
+                    <td>3人</td>
+                </tr>
+                <tr>
+                    <td>3回目以降(30ラウンド目以降)</td>
+                    <td>1人</td>
+                </tr>
+            </table>
+
+            <h3>勝利条件</h3>
+            <p>勝利条件は攻撃側と防御側で異なるので、戦い方を変える必要がある。ただし、共通の勝利条件として、爆弾設置前に敵を全滅させるとラウンド勝利となる。</p>
+            <h4>攻撃側の勝利条件</h4>
+            <ul>
+                <li>スパイクを起動する：スパイクを設置し、爆発するまで45秒間守り切る。</li>
+                <li>敵を全員倒す；防御側のプレイヤーを全員倒す。</li>
+            </ul>
+            <h4>防御側の勝利条件</h4>
+            <ul>
+                <li>スパイクの設置を阻止する：制限時間以内にスパイクを設置させない。</li>
+                <li>スパイクを解除する：スパイクが設置された場合、爆発する前に解除する。</li>
+                <li>敵を全員倒す：スパイクが設置される前に、攻撃側のプレイヤーを全員倒す。</li>
+            </ul>
+           
+
         </div>
     </div>
 
 </body>
-</html>
+</html>　
