@@ -108,6 +108,39 @@
             transform: rotate(45deg);     /*45度回転*/
             box-sizing: border-box;     /*枠線も含めてサイズ調整*/
         }
+        .round-table{
+            width: 100%;
+            border: 3px solid #ff4b55;
+        }
+        .round-table th{
+            background-color: #ff4b55;
+            color:#eee;
+            text-align: center;
+            font-size: 16px;
+            padding: 2px;
+        }
+        .round-table td{
+            padding:8px;
+            font-weight: bold;
+            color:#444343;
+        }
+        .round-table td:first-child{      /*first-childは最初にあるtdだけを言っている*/
+            width:45px;
+        }
+        .round-table tr:not(:first-child) {
+            border-bottom: 1px dashed #555;
+        }
+        .number{
+            display: inline-flex;
+            justify-content: center;      /**横方向の中央ぞろえ*/
+            align-items: center;        /*縦方向の中央ぞろえ*/
+            width: 30px;
+            height: 30px;
+            background-color: #ff4b55;
+            color: white;
+            border-radius: 8px;
+        }
+        
          
          
      </style>
@@ -255,6 +288,28 @@
                 </tr>
             </table>
             <h3>ラウンドの流れ</h3>
+            <table class="round-table">
+                <tr>
+                    <th colspan="2">ラウンドの流れ</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="number">1</span>
+                    </td>
+                    <td>
+                        購入・準備フェーズ
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <span class="number">2</span>
+                    </td> 
+                    <td>
+                        戦闘フェーズ
+                    </td>
+                </tr>
+            </table>
+
         </div>
     </div>
 
